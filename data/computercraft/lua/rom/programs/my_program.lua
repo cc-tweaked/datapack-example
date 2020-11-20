@@ -1,2 +1,4 @@
+local my = require('my_module')
+
 print("This program is available on every computer!")
-my_api.do_something()
+my.do_something()
