@@ -3,12 +3,15 @@ This is an example datapack for ComputerCraft, which can be used as a skeleton
 for your own pack.
 
 Datapacks can be used to add or overwrite files in [ComputerCraft's own rom][rom],
-allowing you to add new programs or modules, or adjust the behavior of existing
+allowing you to add new programs or modules, or adjust the behaviour of existing
 ones. This pack comes with several features:
 
- - `modules/main/my_module.lua`: A new module with a single method `my_api.do_something()`.
- - `programs/my_program.lua`: A new program `my_program`, which just calls `do_something` from above.
- - `modules/turtle/helpers.lua`: A new module with some movement aliases and a `digColumn` method.
+ - `apis/my_api.lua`: Example of a old-style API with a single method `my_api.do_something()`.
+ - `programs/api_program.lua`: A new program `api_program`, which just calls the
+   above function.
+ - `modules/main/my_module.lua`: A new module with a single method `do_something()`.
+ - `programs/my_program.lua`: A new program `my_program`, which just calls `do_something` from `my_module`.
+ - `modules/turtle/helpers.lua`: A new module with a `digColumn` method.
  - `programs/turtle/demo.lua`: A new turtle program that uses the `helpers` module to dig 3x3 openings.
  - `autorun/my-pack.lua`: A basic program which is run whenever a computer turns
    on. This may be used to perform additional setup, such as [registering
@@ -17,14 +20,15 @@ ones. This pack comes with several features:
 (Note: files in `turtle` folders will only be visible to turtles!)
 
 ## Using the Pack
-The contents of this project should be zipped<sup>1</sup> and placed in the `datapacks`
-folder of your world's save folder.
+The contents of this project should be placed in the `datapacks`
+folder in your world's save folder. You may need to zip<sup>1</sup> the
+folder for Minecraft to recognize it.
 The resulting file structure should resemble the the built-in ROM folder,
 looking something like this:
 
 ```
 datapacks
-└─my-pack.zip
+└─my-pack(.zip)
   ├ pack.mcmeta
   └─data
     └─computercraft

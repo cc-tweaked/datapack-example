@@ -5,6 +5,6 @@ turtle.refuel()
 
 -- Dig 3x3 in front of turtle right to left
 h.digColumn()
-h.lt()
+turtle.turnLeft()
 h.digColumn()
 h.digColumn()
